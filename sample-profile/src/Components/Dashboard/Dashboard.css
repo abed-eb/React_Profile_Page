@@ -1,0 +1,13 @@
+.dashboard {
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  /* margin-bottom: 1%; */
+  position: fixed;
+  padding: 10px 30px;
+  height: 52%;
+  font-size: 16px;
+  right: 0;
+  min-width: 20%;
+  background: #efefef;
+}

@@ -36,6 +36,7 @@
 body {
   font-family: "Vazir", Arial, sans-serif;
   font-weight: normal;
+  /* overflow-x: hidden; */
 }
 * {
   padding: 0;
