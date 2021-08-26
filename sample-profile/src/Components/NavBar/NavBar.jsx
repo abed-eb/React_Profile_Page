@@ -31,7 +31,7 @@ const NavBar = () => {
         <div className="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-2 name">
           <div className="row">
             <span className="col-2 align-items-center">
-              <CgProfile size={20} />
+              <CgProfile />
             </span>
             <span className="col-10 d-flex justify-content-center align-items-center">
               {userName}
