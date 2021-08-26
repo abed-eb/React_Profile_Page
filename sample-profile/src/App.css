@@ -63,15 +63,3 @@ textarea {
 button {
   outline: none;
 }
-a {
-  text-decoration: none !important;
-  color: black !important;
-}
-
-a:hover {
-  color: rgb(115, 172, 145) !important;
-}
-
-a:visited {
-  color: rgb(115, 172, 145);
-}
