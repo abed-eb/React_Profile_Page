@@ -15,7 +15,7 @@ const NavBar = () => {
   const [userName, setUserName] = useState("آریوبرزن");
   return (
     <div className="navBar">
-      <div className="logo w-100">
+      <div className="w-100">
         <img alt="logo" src={logo} />
       </div>
       <div className="row menu">
