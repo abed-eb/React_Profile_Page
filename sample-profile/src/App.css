@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: normal;
+  src: url("http://localhost:3000/fonts/Vazir.eot");
+  src: url("http://localhost:3000/fonts/Vazir.eot?#iefix")
+      format("embedded-opentype"),
+    url("http://localhost:3000/fonts/Vazir.woff2") format("woff2"),
+    url("http://localhost:3000/fonts/Vazir.woff") format("woff"),
+    url("http://localhost:3000/fonts/Vazir.ttf") format("truetype");
+}
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: bold;
+  src: url("http://localhost:3000/fonts/Vazir-Bold.eot");
+  src: url("http://localhost:3000/fonts/Vazir-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("http://localhost:3000/fonts/Vazir-Bold.woff2") format("woff2"),
+    url("http://localhost:3000/fonts/Vazir-Bold.woff") format("woff"),
+    url("http://localhost:3000/fonts/Vazir-Bold.ttf") format("truetype");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: lighter;
+  src: url("http://localhost:3000/fonts/Vazir-Light.eot");
+  src: url("http://localhost:3000/fonts/Vazir-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("http://localhost:3000/fonts/Vazir-Light.woff2") format("woff2"),
+    url("http://localhost:3000/fonts/Vazir-Light.woff") format("woff"),
+    url("http://localhost:3000/fonts/Vazir-Light.ttf") format("truetype");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Vazir", Arial, sans-serif;
+  font-weight: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ol,
+ul {
+  list-style: none;
 }
 
-.App-link {
-  color: #61dafb;
+table {
+  border-collapse: collapse;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  outline: none;
+}
+
+textarea {
+  outline: none;
+}
+
+button {
+  outline: none;
 }
