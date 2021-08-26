@@ -14,34 +14,33 @@ const NavBar = () => {
 
   const [userName, setUserName] = useState("آریوبرزن");
   return (
-    <div className="navBar row">
-      <div className="logo col-xl-3 col-lg-3 col-md-">
+    <div className="navBar">
+      <div className="logo w-100">
         <img alt="logo" src={logo} />
       </div>
-      <div className="items col-xl-6 col-lg-6 col-md-8">
-        {navBarItems.map((item) => {
-          return (
-            <a href="#" key={item.id}>
-              {item.title}
-            </a>
-          );
-        })}
-      </div>
-      <div className="details col-xl-3 col-lg-3 col-md-2">
-        <div className="row detail w-100">
-          <div className="col name">
-            <div className="row">
-              <span className="col-2">
-                <CgProfile />
-              </span>
-              <span className="col-10 d-flex justify-content-center">
-                {userName}
-              </span>
-            </div>
+      <div className="row menu">
+        <div className="items col-xl-8 col-lg-6 col-md-7 col-sm-8 col-7">
+          {navBarItems.map((item) => {
+            return (
+              <a href="#" key={item.id}>
+                {item.title}
+              </a>
+            );
+          })}
+        </div>
+        <div className="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-2 name">
+          <div className="row">
+            <span className="col-2 align-items-center">
+              <CgProfile />
+            </span>
+            <span className="col-10 d-flex justify-content-center align-items-center">
+              {userName}
+            </span>
           </div>
-          <div className="col notification">
-            <BsBell />
-          </div>
+        </div>
+
+        <div className="col-xl-2 col-lg-3 col-md-2 col-sm-1 col-3 notification">
+          <BsBell size={25} />
         </div>
       </div>
     </div>
