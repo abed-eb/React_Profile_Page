@@ -1,0 +1,21 @@
+.footer {
+  position: fixed;
+  padding: 30px 5px;
+  min-height: 30%;
+  font-size: 16px;
+  bottom: 0;
+  width: 100%;
+  background: #efefef;
+}
+
+.table-item {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+tr {
+  font-size: 17px !important;
+}
