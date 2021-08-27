@@ -39,17 +39,17 @@ class Profile extends Component {
 
   componentDidMount() {
     this.setState({
-      userName: localStorage.getItem("user-name"),
-      email: localStorage.getItem("email"),
-      firstName: localStorage.getItem("first-name"),
-      lastName: localStorage.getItem("last-name"),
-      country: localStorage.getItem("country"),
-      city: localStorage.getItem("city"),
-      phone: localStorage.getItem("phone"),
-      address: localStorage.getItem("address"),
-      fullName: localStorage.getItem("full-name"),
-      birth: localStorage.getItem("birth"),
-      accountNumber: localStorage.getItem("accountNumber"),
+      userName: sessionStorage.getItem("user-name"),
+      email: sessionStorage.getItem("email"),
+      firstName: sessionStorage.getItem("first-name"),
+      lastName: sessionStorage.getItem("last-name"),
+      country: sessionStorage.getItem("country"),
+      city: sessionStorage.getItem("city"),
+      phone: sessionStorage.getItem("phone"),
+      address: sessionStorage.getItem("address"),
+      fullName: sessionStorage.getItem("full-name"),
+      birth: sessionStorage.getItem("birth"),
+      accountNumber: sessionStorage.getItem("accountNumber"),
     });
   }
 
@@ -121,9 +121,9 @@ class Profile extends Component {
               <div className="profile-avatar d-flex justify-content-center">
                 <img
                   src={
-                    !localStorage.getItem("profileAvatar")
+                    !sessionStorage.getItem("profileAvatar")
                       ? this.state.profileAvatar
-                      : localStorage.getItem("profileAvatar")
+                      : sessionStorage.getItem("profileAvatar")
                   }
                   alt="profile avatar"
                   className="avatar-img"

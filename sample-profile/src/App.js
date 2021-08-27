@@ -9,18 +9,18 @@ import { ToastContainer, toast } from "react-toastify";
 import defaultAvatar from "./assets/img/default-profile-picture.jpg";
 
 const App = () => {
-  const [userName, setUserName] = useState(localStorage.getItem("user-name"));
-  const [fullName, setFullName] = useState(localStorage.getItem("full-name"));
-  const [email, setEmail] = useState(localStorage.getItem("email"));
+  const [userName, setUserName] = useState(sessionStorage.getItem("user-name"));
+  const [fullName, setFullName] = useState(sessionStorage.getItem("full-name"));
+  const [email, setEmail] = useState(sessionStorage.getItem("email"));
   const [profileAvatar, setProfileAvatar] = useState(
-    !localStorage.getItem("profileAvatar")
+    !sessionStorage.getItem("profileAvatar")
       ? defaultAvatar
-      : localStorage.getItem("profileAvatar")
+      : sessionStorage.getItem("profileAvatar")
   );
 
   const saveAvatar = (chosenAvatar) => {
     setProfileAvatar(chosenAvatar);
-    localStorage.setItem("profileAvatar", chosenAvatar);
+    sessionStorage.setItem("profileAvatar", chosenAvatar);
   };
   return (
     <div className="App">

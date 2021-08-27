@@ -30,42 +30,25 @@ export function saveCredentials(
   birth,
   accountNumber
 ) {
-  localStorage.setItem("user-email", email);
-  localStorage.setItem("user-name", userName);
-  localStorage.setItem("email", email);
-  localStorage.setItem("first-name", firstName);
-  localStorage.setItem("last-name", lastName);
-  localStorage.setItem("country", country);
-  localStorage.setItem("city", city);
-  localStorage.setItem("phone", phone);
-  localStorage.setItem("address", address);
-  localStorage.setItem("full-name", fullName);
-  localStorage.setItem("birth", birth);
-  localStorage.setItem("accountNumber", accountNumber);
+  sessionStorage.setItem("user-email", email);
+  sessionStorage.setItem("user-name", userName);
+  sessionStorage.setItem("email", email);
+  sessionStorage.setItem("first-name", firstName);
+  sessionStorage.setItem("last-name", lastName);
+  sessionStorage.setItem("country", country);
+  sessionStorage.setItem("city", city);
+  sessionStorage.setItem("phone", phone);
+  sessionStorage.setItem("address", address);
+  sessionStorage.setItem("full-name", fullName);
+  sessionStorage.setItem("birth", birth);
+  sessionStorage.setItem("accountNumber", accountNumber);
 }
 
-export function clearCredentials() {
-  sessionStorage.removeItem("user-token");
-  sessionStorage.removeItem("user-id");
-  sessionStorage.removeItem("user-email");
-  sessionStorage.removeItem("profileAvatar");
-  sessionStorage.removeItem("user-remember-me");
-  localStorage.removeItem("user-email");
-  localStorage.removeItem("user-token");
-  localStorage.removeItem("user-id");
-  localStorage.removeItem("profileAvatar");
-  localStorage.removeItem("user-remember-me");
-}
-
-export function getItem(item) {
-  return localStorage.getItem(item) || sessionStorage.getItem(item);
-}
-
-export function getBase64(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = (error) => reject(error);
-  });
-}
+// export function getBase64(file) {
+//   return new Promise((resolve, reject) => {
+//     const reader = new FileReader();
+//     reader.readAsDataURL(file);
+//     reader.onload = () => resolve(reader.result);
+//     reader.onerror = (error) => reject(error);
+//   });
+// }
