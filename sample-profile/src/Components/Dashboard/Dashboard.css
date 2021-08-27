@@ -10,9 +10,14 @@
   /* background: #efefef; */
 }
 
-.avatar {
+.dashboard-avatar {
   border-radius: 50%;
-  height: inherit;
+  max-width: 65%;
+  /* max-height: 55%; */
+}
+
+.dashboard-email {
+  color: rgb(180, 180, 180);
 }
 
 .options {
@@ -23,15 +28,18 @@
   min-height: 100vh;
 }
 .dashboard-li :hover {
-  color: rgb(115, 172, 145) !important;
+  color: rgb(81, 96, 133) !important;
+  background-color: #cdcdec;
 }
 .dashboard-li {
-  padding: 0.5rem;
   cursor: pointer;
   width: 100%;
 }
 
 .dashboard-item {
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: #a1a1cf;
   width: 100%;
   width: inherit;
   margin: 0 !important;

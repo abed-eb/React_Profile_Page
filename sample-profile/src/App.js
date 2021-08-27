@@ -4,22 +4,51 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import Footer from "./Components/Footer/Footer";
 import NavBar from "./Components/NavBar/NavBar";
 import { useState } from "react";
+import Profile from "./Components/Form/Profile";
+import { ToastContainer, toast } from "react-toastify";
+import defaultAvatar from "./assets/img/default-profile-picture.jpg";
+
 const App = () => {
-  const [userName, setUserName] = useState("آریوبرزن");
-  const [email, setEmail] = useState("Abdi.eb79@gmail.com");
+  const [userName, setUserName] = useState(localStorage.getItem("user-name"));
+  const [fullName, setFullName] = useState(localStorage.getItem("full-name"));
+  const [email, setEmail] = useState(localStorage.getItem("email"));
+  const [profileAvatar, setProfileAvatar] = useState(
+    !localStorage.getItem("profileAvatar")
+      ? defaultAvatar
+      : localStorage.getItem("profileAvatar")
+  );
+
+  const saveAvatar = (chosenAvatar) => {
+    setProfileAvatar(chosenAvatar);
+    localStorage.setItem("profileAvatar", chosenAvatar);
+  };
   return (
-    <div>
+    <div className="App">
       <NavBar userName={userName} setUserName={setUserName} />
-      <div className="row">
-        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+      <div className="row p-5">
+        <div className="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-3">
           <Dashboard
+            profileAvatar={profileAvatar}
+            setProfileAvatar={setProfileAvatar}
             userName={userName}
             setUserName={setUserName}
             email={email}
             setEmail={setEmail}
           />
         </div>
-        <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 w-100"></div>
+        <div className="col-xl-10 col-lg-9 col-md-9 col-sm-9 col-9">
+          <Profile
+            fullName={fullName}
+            setFullName={setFullName}
+            userName={userName}
+            setUserName={setUserName}
+            email={email}
+            setEmail={setEmail}
+            profileAvatar={profileAvatar}
+            setProfileAvatar={setProfileAvatar}
+            saveAvatar={saveAvatar}
+          />
+        </div>
       </div>
 
       <Footer />

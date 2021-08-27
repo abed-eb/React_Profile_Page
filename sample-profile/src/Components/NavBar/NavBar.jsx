@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./NavBar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "../../assets/icons/image002.jpg";
+import logo from "../../assets/img/image002.jpg";
 import { CgProfile } from "react-icons/cg";
 import { BsBell } from "react-icons/bs";
 const NavBar = ({ userName, setUserName }) => {

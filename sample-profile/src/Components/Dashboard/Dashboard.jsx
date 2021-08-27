@@ -1,5 +1,6 @@
 import "./Dashboard.css";
-import { CgProfile } from "react-icons/cg";
+
+import defaultAvatar from "../../assets/img/default-profile-picture.jpg";
 import { useState } from "react";
 import { BsCardText } from "react-icons/bs";
 import { IoWalletOutline } from "react-icons/io5";
@@ -7,7 +8,14 @@ import { BiStar } from "react-icons/bi";
 import { BsBell } from "react-icons/bs";
 import { BiIdCard } from "react-icons/bi";
 import { IoExitOutline } from "react-icons/io5";
-const Dashboard = ({ userName, setUserName, email, setEmail }) => {
+const Dashboard = ({
+  userName,
+  setUserName,
+  email,
+  setEmail,
+  profileAvatar,
+  setProfileAvatar,
+}) => {
   const [dashboardItems, setDashboardItems] = useState([
     { id: 1, title: "درخواست‌ها", src: <BsCardText /> },
     { id: 2, title: "تراکنش مالی", src: <IoWalletOutline /> },
@@ -19,12 +27,16 @@ const Dashboard = ({ userName, setUserName, email, setEmail }) => {
   return (
     <div className="dashboard">
       <div className="personal-info row">
-        <div className="avatar col-xl-4">
-          <CgProfile size={30} />
+        <div className="dashboard-avatar col-xl-7 col-lg-8 col-md-9 col-sm-10">
+          <img
+            className="dashboard-avatar"
+            src={profileAvatar}
+            alt="profile avatar"
+          />
         </div>
-        <div className="info col-xl-8">
-          <div>{userName}</div>
-          <div>{email}</div>
+        <div className="info col-xl-5 col-lg-4 col-md-3 col-sm-2">
+          <h5>{userName}</h5>
+          <p className="dashboard-email">{email}</p>
         </div>
       </div>
       <ul className="options">

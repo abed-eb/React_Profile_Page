@@ -32,10 +32,13 @@
     url("http://localhost:3000/fonts/Vazir-Light.woff") format("woff"),
     url("http://localhost:3000/fonts/Vazir-Light.ttf") format("truetype");
 }
-
+.App {
+  background-color: #f5fafc;
+}
 body {
   font-family: "Vazir", Arial, sans-serif;
   font-weight: normal;
+
   /* overflow-x: hidden; */
 }
 * {

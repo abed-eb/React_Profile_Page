@@ -1,0 +1,41 @@
+.form {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form h5 {
+  color: #a8adb1;
+}
+.profile-info {
+  background-color: white;
+  padding: 1rem;
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-avatar {
+  width: 100%;
+}
+
+.avatar-img {
+  border-radius: 50%;
+  width: 20%;
+  cursor: pointer;
+}
+
+.space {
+  width: 50%;
+  height: 10vh;
+}
+.user-details {
+  background-color: white;
+  padding: 1rem;
+  width: 100%;
+}

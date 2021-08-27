@@ -1,0 +1,19 @@
+#preview{
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover
+}
+.select-btn{
+    /* position: absolute;
+    margin-top: 10%; */
+    /* margin-left: 7.85%; */
+    /* background-color: none; */
+    /* top: 0%;
+    left: 50%; */
+}
+.save-button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

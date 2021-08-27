@@ -1,8 +1,8 @@
 import "./Footer.css";
-import logo from "../../assets/icons/image002.jpg";
+import logo from "../../assets/img/image002.jpg";
 const Footer = () => {
   return (
-    <div className="footer row">
+    <div className="footer row p-5">
       <div className="col">
         <div className="w-100">
           <img alt="logo" src={logo} />

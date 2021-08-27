@@ -1,0 +1,13 @@
+.avatar {
+  width: 20%;
+  margin: 1rem;
+}
+.avatar img {
+  border: 1px #a0a2b3 solid;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.avatarimage :hover {
+  cursor: pointer !important;
+}
