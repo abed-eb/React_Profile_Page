@@ -1,11 +1,20 @@
 .navBar {
-  overflow-x: hidden;
+  overflow: hidden;
   /* margin: 0 !important; */
-  background-color: #efefef;
-  width: 100%;
-  /* padding: 10px 5px; */
+  background-color: white;
+  /* width: 100%;
+  padding: 10px 5px;
   min-height: -webkit-fill-available;
-  font-size: 16px;
+  font-size: 16px; */
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
 }
 .items {
   display: flex;

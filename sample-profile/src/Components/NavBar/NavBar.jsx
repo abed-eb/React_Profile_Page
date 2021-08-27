@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../../assets/icons/image002.jpg";
 import { CgProfile } from "react-icons/cg";
 import { BsBell } from "react-icons/bs";
-const NavBar = () => {
+const NavBar = ({ userName, setUserName }) => {
   const [navBarItems, setNavBarItems] = useState([
     { id: 1, title: "چطور کار می‌کند؟" },
     { id: 2, title: "قوانین و مقررات" },
@@ -12,7 +12,6 @@ const NavBar = () => {
     { id: 4, title: "درباره ما" },
   ]);
 
-  const [userName, setUserName] = useState("آریوبرزن");
   return (
     <div className="navBar">
       <div className="w-100">

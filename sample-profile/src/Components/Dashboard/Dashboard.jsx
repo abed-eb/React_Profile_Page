@@ -7,14 +7,12 @@ import { BiStar } from "react-icons/bi";
 import { BsBell } from "react-icons/bs";
 import { BiIdCard } from "react-icons/bi";
 import { IoExitOutline } from "react-icons/io5";
-const Dashboard = () => {
-  const [name, setName] = useState("عبدالله عبادی");
-  const [email, setEmail] = useState("Abdi.eb79@gmail.com");
+const Dashboard = ({ userName, setUserName, email, setEmail }) => {
   const [dashboardItems, setDashboardItems] = useState([
     { id: 1, title: "درخواست‌ها", src: <BsCardText /> },
     { id: 2, title: "تراکنش مالی", src: <IoWalletOutline /> },
     { id: 3, title: "امتیاز‌ها و نظرات", src: <BiStar /> },
-    { id: 4, title: "اعلان عا", src: <BsBell /> },
+    { id: 4, title: "اعلان ها", src: <BsBell /> },
     { id: 4, title: "تکمیل حساب کاربری", src: <BiIdCard /> },
     { id: 4, title: "خروج", src: <IoExitOutline /> },
   ]);
@@ -25,20 +23,22 @@ const Dashboard = () => {
           <CgProfile size={30} />
         </div>
         <div className="info col-xl-8">
-          <div>{name}</div>
+          <div>{userName}</div>
           <div>{email}</div>
         </div>
       </div>
       <ul className="options">
         {dashboardItems.map((item) => {
           return (
-            <div
-              className="row d-flex justify-content-center align-items-center"
-              key={item.id}
-            >
-              <div className="icon col-2 align-items-center ">{item.src}</div>
-
-              <li className="col-8">{item.title}</li>
+            <div className="dashboard-li" key={item.id}>
+              <div className="row d-flex justify-content-center align-items-center dashboard-item">
+                <div className="icon col-xl-2 col-lg-2 col-md-3 col-sm-4 col-5 align-items-center ">
+                  {item.src}
+                </div>
+                <li className="col-xl-10 xol-lg-10 col-md-9 col-sm-8 col-7">
+                  {item.title}
+                </li>
+              </div>
             </div>
           );
         })}
