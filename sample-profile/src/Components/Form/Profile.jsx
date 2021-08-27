@@ -12,6 +12,7 @@ import {
   valueIsNumber,
 } from "../util";
 import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 class Profile extends Component {
   constructor(props) {
     super(props);
@@ -136,7 +137,7 @@ class Profile extends Component {
                 />
               </div>
               <div className="profile-detail row pt-2">
-                <div className="col-lg-3 col-md-3 col-sm-4 col-5">
+                <div className="col-xl-3 col-lg-3">
                   <MyInput
                     value={this.state.userName}
                     onChange={this.handleChange}
@@ -148,7 +149,7 @@ class Profile extends Component {
                     invalidMessage="ارور"
                   />
                 </div>
-                <div className="col-lg-9 col-md-9 col-sm-8 col-7">
+                <div className="col-xl-9 col-lg-9">
                   <MyInput
                     value={this.state.email}
                     onChange={this.handleChange}
@@ -171,7 +172,7 @@ class Profile extends Component {
               <h5>اطلاعات تماس</h5>
               <div className="contact-detail">
                 <div className="row pb-4">
-                  <div className="col">
+                  <div className="col-xl-4 col-lg-5 col-md-6 col-sm-5 col-5">
                     <MyInput
                       value={this.state.country}
                       onChange={this.handleChange}
@@ -183,7 +184,7 @@ class Profile extends Component {
                       invalidMessage="ارور"
                     />
                   </div>
-                  <div className="col">
+                  <div className="col-xl-4 col-lg-7 col-md-6 col-sm-7 col-7">
                     <MyInput
                       value={this.state.city}
                       onChange={this.handleChange}
@@ -195,7 +196,7 @@ class Profile extends Component {
                       invalidMessage="ارور"
                     />
                   </div>
-                  <div className="col">
+                  <div className="col-xl-4">
                     <MyInput
                       value={this.state.phone}
                       onChange={this.handleChange}
@@ -223,7 +224,7 @@ class Profile extends Component {
               <h5 className="pt-4">اطلاعات بانکی</h5>
               <div className="bank-detail">
                 <div className="row pb-4">
-                  <div className="col-4">
+                  <div className="col-xl-4">
                     <MyInput
                       value={this.state.country}
                       onChange={this.handleChange}
@@ -235,7 +236,7 @@ class Profile extends Component {
                       invalidMessage="ارور"
                     />
                   </div>
-                  <div className="col-8">
+                  <div className="col-xl-8">
                     <MyInput
                       value={this.state.fullName}
                       onChange={this.handleChange}
@@ -262,7 +263,7 @@ class Profile extends Component {
               <h5 className="pt-4">اطلاعات هویتی</h5>
               <div className="identity-detail">
                 <div className="row pb-4">
-                  <div className="col-4">
+                  <div className="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-5">
                     <MyInput
                       value={this.state.firstName}
                       onChange={this.handleChange}
@@ -274,7 +275,7 @@ class Profile extends Component {
                       invalidMessage="ارور"
                     />
                   </div>
-                  <div className="col-4">
+                  <div className="col-xl-4 col-lg-8 col-md-8 col-sm-7 col-7">
                     <MyInput
                       value={this.state.lastName}
                       onChange={this.handleChange}
@@ -286,7 +287,7 @@ class Profile extends Component {
                       invalidMessage="ارور"
                     />
                   </div>
-                  <div className="col-4">
+                  <div className="col-xl-4">
                     <MyInput
                       value={this.state.birth}
                       onChange={this.handleChange}
