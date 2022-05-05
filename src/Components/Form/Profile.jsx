@@ -113,7 +113,7 @@ class Profile extends Component {
     return (
       <Fragment>
         <ToastContainer />
-        <div className="form">
+        <form className="form">
           <div className="space"></div>
           <div className="profile">
             <div className="space"></div>
@@ -322,7 +322,7 @@ class Profile extends Component {
             </div>
             <div className="space"></div>
           </div>
-        </div>
+        </form>
       </Fragment>
     );
   }
