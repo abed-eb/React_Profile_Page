@@ -62,7 +62,8 @@ class Profile extends Component {
     console.log(name + " : " + value);
   };
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault();
     let dataIsValid = true;
     if (!validateEmail(this.state.email)) {
       this.setState({ invalidEmail: true });
